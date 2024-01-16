@@ -1,13 +1,20 @@
 version: '3.1'
 services:
+  # servicio de la aplicacion - python
   web:
+    # Imagen de la aplicacion con su version
     image: odoo:16.0
+    # servicio de base de datos que utiliza la aplicacion
+    # esta aplicacion depende de este servicio
+    # no arrancara hasta que el servicio este levantada
     depends_on:
-      - db
+      - db # Por dedfecto es db. SI quiero añadir más parametros, variables.. tengo que cambiar el nombre (mydb por ejemplo)
     ports:
+    # mapeo de puertos para acceder desde mi maquina
       - "8069:8069"
   db:
     image: postgres:15
+    # variables de entorno
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
