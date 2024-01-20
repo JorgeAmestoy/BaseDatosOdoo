@@ -49,10 +49,10 @@ la conexión:
 
 A continuación, desde la terminal y situado en el directorio
 en el que se encuentra dicho archivo, arrancamos e iniciamos los contenedores con los comandos `docker-compose up -d` y `docker-compose start`.
-En el caso de que hubiese un error por ocupación previa del puerto 5432 podríamos cambiar el puerto para dicho servicio y así liberarlo,
-o  parar los servicios que están levantandos en dicho puerto con:<br><br>
-`netstat -putan | grep 5432`: para ver cuáles se están utilizando <br><br>
-`sudo service <nombreServicio> stop`: para detenerlos
+En el caso de que hubiese un error por ocupación del puerto 5432 podríamos cambiar el puerto para dicho servicio y así liberarlo,
+o  parar el servicio que está levantado en dicho puerto con:<br><br>
+`netstat -putan | grep 5432`: para ver cuál se está utilizando <br><br>
+`sudo service <nombreServicio> stop`: para detenerlo
 
 Luego, escribimos la dirección IP en el navegador seguido 
 del puerto definido previamente: *http://localhost:8069* , dando como resultado:<br><br>
