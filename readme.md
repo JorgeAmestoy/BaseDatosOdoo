@@ -42,7 +42,7 @@ Así, el puerto 5432 de la máquina host se mapea al puerto 5432 del contenedor.
 En **environment** mostramos las variables de entorno que se van a utilizar en dicho contenedor. En este caso, la base de datos se llama **postgres**, 
 el usuario es **odoo** y la contraseña también es **odoo**.
 
-Tras esto, configuramos la base de datos desde la propia interfaz del IDE, rellenando los campos tal y como especificamos en el **.yml**, y testeando
+Tras esto, configuramos la base de datos desde la propia interfaz del IDE (PyCharm) rellenando los campos tal y como especificamos en el **.yml**, y testeando
 la conexión:
 
 ![BD](Imagenes/baseDatos.png)<br><br>
@@ -55,9 +55,11 @@ o  parar el servicio que está levantado en dicho puerto con:<br><br>
 `sudo service <nombreServicio> stop`: para detenerlo
 
 Luego, escribimos la dirección IP en el navegador seguido 
-del puerto definido previamente: *http://localhost:8069* , dando como resultado:<br><br>
+del puerto definido previamente: *http://10.0.9.17:8069* , dando como resultado:<br><br>
 ![Odoo](Imagenes/odooDbPag.png)<br><br>
-Para finalizar, configuramos las credenciales y pulsamos **Create database** para entrar en Odoo:<br><br>
+Configuramos las credenciales añadiendo un nuevo nombre en **Database Name** para evitar
+conflictos con la base de datos predeterminada de **PostgreSQL**.<br> 
+Por último, pulsamos **Create database** e  iniciamos sesión con el correo y la contraseña correspondiente para entrar en **Odoo**:<br><br>
 ![Odoo](Imagenes/pagPrincipalOdoo.png)<br><br>
 
 
